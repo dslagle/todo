@@ -1,3 +1,6 @@
-<p>
-  todo-items works!
-</p>
+<div class = "header-footer message" *ngFor="let todo of _todoService.items" style="margin: 0; padding: 0">
+  <div class="content">
+    <input type="checkbox" [(ngModel)]="todo.completed" />
+    <span>{{todo.description}}</span>
+  </div>
+</div>
